@@ -32,16 +32,16 @@ with open(working_file, 'r') as csvfile:
     #Unzip the data_mtx on three separate lists (columns) to count each candidate's votes
     x,y,z = zip(*d[1])
     w=[]
-    #winner=0
-    p = (len(d[2])
+    winner=0
+    p = (len(d[2]))
     for i in range(p):
         w.append(z.count(d[2][i])/d[0]*100)
-        print(f'Votes % for {d[2][i]} is {w[i]}%')  
-   #     if w[i]<Winner: 
-    #        winner = winner 
-     #   else:
-      #      winner = w[i]
-       #     position = i   
+        print(f'Votes % for {d[2][i]} is {w[i]:.2f}%')  
+        if w[i]<winner: 
+            winner = winner 
+        else:
+            winner = w[i]
+            position = i   
     print ('-----------------------------')
-    print (f'Election Winner: {d[position]} with {winner} % votes')
+    print (f'Election Winner: {d[2][position]} with {winner:.2f} % votes')
     print ('-----------------------------')

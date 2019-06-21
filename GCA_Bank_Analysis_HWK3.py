@@ -62,6 +62,6 @@ with open(working_file, 'r') as csvfile:
     print(f'Total months for the analysis are {d[1]}')
     print(f'Net Total P/L for all the months is $ {d[0]}')
     
-    print (f'Average of the changes in P/L over the entire period was: $ {average}')
+    print (f'Average of the changes in P/L over the entire period was: $ {average:.2f}')
     print (f'Worst month result was in {positionmin[0][0]}: $ {d[2]}')
     print (f'Best month result was in {positionmax[0][0]}: $ {d[3]}')
